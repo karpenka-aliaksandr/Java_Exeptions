@@ -31,12 +31,17 @@ public class HW01 {
         // Важно: При выполнении метода единственное исключение, которое пользователь 
         // может увидеть - RuntimeException, т.е. ваше.
 
-        int[] dividend = CreateArray(10+(rnd.nextInt(10) / 9), 10, rnd);
-        int[] divisor = CreateArray(10+(rnd.nextInt(10) / 9), 10, rnd);
-        Float[] quotient = Division(dividend, divisor);
-        System.out.println(Arrays.toString(dividend));
-        System.out.println(Arrays.toString(divisor));
-        System.out.println(Arrays.toString(quotient)); 
+        for (int i = 0; i < 5; i++) {
+            System.out.printf("Итерация %d\n", i+1);
+            int[] dividend = CreateArray(10+(rnd.nextInt(10) / 9), 10, rnd);
+            int[] divisor = CreateArray(10+(rnd.nextInt(10) / 9), 10, rnd);
+            System.out.println(Arrays.toString(dividend));
+            System.out.println(Arrays.toString(divisor));
+            Float[] quotient = Division(dividend, divisor);
+            System.out.println(Arrays.toString(quotient)); 
+            System.out.println();
+        }
+        
     }
 
 
