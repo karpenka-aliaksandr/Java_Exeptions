@@ -1,0 +1,3 @@
+https://github.com/karpenka-aliaksandr/Java_Exeptions.git
+
+Домашняя работа в файлах HW02_1.java - HW02_4.java в папке HomeWork02
