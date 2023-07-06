@@ -1,8 +1,6 @@
 package Commands.ControlllerCommands;
 
-import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileReader;
 import java.io.FileWriter;
 
 import Commands.ControlllerCommands.Base.ControllerCommand;
@@ -83,8 +81,14 @@ public class InputData extends ControllerCommand {
                     fw.close();
                     screen.setBar("Данные успешно cохранены");
                 } catch (Exception e) {
-                    screen.setBar(String.format("Не удалось сохранить данные. \n")) ;
-                    e.printStackTrace();
+                    StringBuilder sb = new StringBuilder();
+                    sb.append("Не удалось сохранить данные. \n");
+                    sb.append(e.getLocalizedMessage()+"\n");
+                    for (StackTraceElement ste : e.getStackTrace()) {
+                        sb.append(ste.toString()+"\n");
+                    }
+                    screen.setBar(sb.toString()) ;
+                    
                 }
 
         } catch (DataWrongExeption de) {
