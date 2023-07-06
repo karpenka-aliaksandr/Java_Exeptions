@@ -1,0 +1,4 @@
+https://github.com/karpenka-aliaksandr/Java_Exeptions.git
+
+Домашняя работа в файлах в папке HomeWork03. 
+Модуль с заполнением данных и обработкой ошибок - в файле HomeWork03/Commands/ControllerCommands/InputData.java
